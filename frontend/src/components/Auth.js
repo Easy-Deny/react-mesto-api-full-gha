@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://auth.nomoreparties.co';
+export const BASE_URL = 'http://localhost:3500';
 
 export function register(email, password){
   return fetch(`${BASE_URL}/signup`, {
@@ -34,7 +34,8 @@ export function checkToken(token){
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${token}`,
+      'Authorization': `${token}`,
+      //'Authorization': `Bearer ${token}`,
     }
   })
   .then(res => checkServerStatus(res))

@@ -63,7 +63,7 @@ function App() {
             checkToken(token).then((res) => {
                 if (res) {
                     const userData = {
-                        email: res.data.email
+                        email: res.email
                     }
                     console.log(userData)
                     setLoggedIn(true);
