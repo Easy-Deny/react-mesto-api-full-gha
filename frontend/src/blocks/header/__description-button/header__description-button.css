@@ -1,0 +1,10 @@
+.header__description-button{
+    color: #A9A9A9;
+    text-decoration: none;
+    margin: 0;
+}
+
+.header__description-button:hover{
+    cursor: pointer;
+    opacity: 0.6;
+}

@@ -1,0 +1,13 @@
+.header__description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    padding-top: 8px;
+}

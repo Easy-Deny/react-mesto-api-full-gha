@@ -1,0 +1,10 @@
+.popup-auth__save-button{
+    margin-top: 212px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+.popup-auth__save-button:hover{
+    opacity: 0.85;
+    cursor: pointer;
+    background-color: white;
+}
