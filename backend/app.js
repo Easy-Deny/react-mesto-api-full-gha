@@ -45,6 +45,11 @@ app.use(function (req, res, next) {
 
 app.use(express.json());
 app.use(requestLogger);
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 app.use(userRouter);
 app.use(cardRouter);
 app.use(errorLogger);
