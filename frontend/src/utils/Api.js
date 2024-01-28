@@ -2,6 +2,7 @@ class Api {
     constructor(props) {
         this.url = props.url
         this.headers = props.headers
+        //this.token = localStorage.getItem('token')
         this.checkServerStatus = this.checkServerStatus.bind(this)
     }
     getAllElements() {
@@ -93,6 +94,7 @@ export const api = new Api({
    // url: 'https://mesto.nomoreparties.co/v1/cohort-62',
     headers: {
         'content-type': 'application/json',
-       // authorization: '8fe21241-d4e3-40e9-bdfb-586c0b845bc2'
+        'authorization': localStorage.getItem('token')
+        //'authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWI1NzNjYWI5ZTk5MmI1MTQ2ZTZjMjciLCJpYXQiOjE3MDYzOTE4MTAsImV4cCI6MTcwNjk5NjYxMH0.RqsYoAqtq7CTiuB3PyqyeoWu07xSIoLY_t4oif-IL2M'
     }
 })

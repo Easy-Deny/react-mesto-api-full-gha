@@ -22,8 +22,10 @@ export function authorize(email, password){
   })
   .then((response => checkServerStatus(response)))
   .then((data) => {
+    //console.log(`вот что приходит в дата ${data}`)
     if (data.token){
       localStorage.setItem('token', data.token);
+      console.log(localStorage.getItem('token'))
       return data;
     }
   })
@@ -39,7 +41,10 @@ export function checkToken(token){
     }
   })
   .then(res => checkServerStatus(res))
-  .then(data => data)
+  .then(data => {
+    //console.log(data);
+    return data
+  })
 } 
 
 function checkServerStatus(res){

@@ -29,7 +29,8 @@ const popupEditProfile = document.querySelector('.popup_type_edit-profile');
 export function authorization(formValue, setFormValue) {
     authorize(formValue.email, formValue.password)
         .then((data) => {
-            if (data.token) {
+           // console.log(data);
+            if (data) {
                 setFormValue({ email: '', password: '' });
                 window.location.assign('/mesto');
             }
@@ -59,13 +60,14 @@ function App() {
 
     function tokenCheck() {
         const token = localStorage.getItem('token');
+        //console.log(token)
         if (token) {
             checkToken(token).then((res) => {
                 if (res) {
                     const userData = {
                         email: res.email
                     }
-                    console.log(userData)
+                    //console.log(userData)
                     setLoggedIn(true);
                     setUserData(userData)
                     navigate("/mesto", { replace: true })
