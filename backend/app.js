@@ -25,6 +25,7 @@ const allowedCors = [
   'http://praktikum.tk',
   'http://localhost:3000',
   'http://easy-deny.pr15.nomoredomainsmonster.ru',
+  'https://easy-deny.pr15.nomoredomainsmonster.ru',
 ];
 
 app.use(function (req, res, next) {
