@@ -144,7 +144,7 @@ function App() {
 
     function getUserInfo() {
         api.getAllElements().then((data) => {
-            console.log(data);
+            //console.log(data);
             setCurrentUser(data);
         })
             .catch((err) => { console.log(`не загрузить данные профиля, Ошибка: ${err}`) })
