@@ -5,12 +5,12 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/Easy-Deny/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 51.250.31.81
 
-Frontend https://...
+Frontend https://easy-deny.pr15.nomoredomainsmonster.ru
 
-Backend https://...
+Backend https://api.easy-deny.pr15.nomoredomainsmonster.ru
