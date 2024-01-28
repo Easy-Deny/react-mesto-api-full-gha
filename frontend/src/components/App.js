@@ -230,8 +230,8 @@ function App() {
                     <Header
                         email={userData ? userData.email : ''}
                         loggedIn={loggedIn}
-                        onClick={loggedIn ? handleLogout : window.location.href === 'http://localhost:3000/sign-in' ? goRegistration : goLogin}
-                        buttonText={loggedIn ? 'Выход' : window.location.href === 'http://localhost:3000/sign-in' ? 'Регистрация' : 'Войти'}
+                        onClick={loggedIn ? handleLogout : window.location.href === 'http://localhost:3000/sign-in' ? goLogin : goRegistration}
+                        buttonText={loggedIn ? 'Выход' : window.location.href === 'http://localhost:3000/sign-in' ? 'Войти' : 'Регистрация'}
                     />
                     <Routes>
                         <Route path="/sign-in" element={<Login onSubmit={loginSubmit} />} />
