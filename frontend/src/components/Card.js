@@ -5,8 +5,10 @@ let cardLiked = undefined;
 
 function Card(props) {
     const currentUser = useContext(CurrentUserContext)
-    const isOwn = props.newCard.owner._id === currentUser._id;
-    const isLiked = props.newCard.likes.some(i => i._id === currentUser._id);
+    const isOwn = props.newCard.owner === currentUser._id;
+    //const isOwn = props.newCard.owner._id === currentUser._id;
+    const isLiked = props.newCard.likes.some(i => i === currentUser._id);
+    //const isLiked = props.newCard.likes.some(i => i._id === currentUser._id);
    /*  function isLiked(card) {
         return cardLiked = card.likes.some(element => { return (element._id === currentUser._id) })
     } */

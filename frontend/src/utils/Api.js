@@ -2,7 +2,6 @@ class Api {
     constructor(props) {
         this.url = props.url
         this.headers = props.headers
-        //this.token = localStorage.getItem('token')
         this.checkServerStatus = this.checkServerStatus.bind(this)
     }
     getAllElements() {
@@ -63,7 +62,6 @@ class Api {
             .then((res) => { return this.checkServerStatus(res) })
     }
     editAvatar(data) {
-        //console.log(data);
         return fetch(`${this.url}/users/me/avatar`, {
             method: 'PATCH',
             headers: this.headers,
@@ -90,8 +88,8 @@ class Api {
 
 
 export const api = new Api({
-   url: 'http://localhost:3500',
-   // url: 'https://mesto.nomoreparties.co/v1/cohort-62',
+    url: 'http://localhost:3500',
+    // url: 'https://mesto.nomoreparties.co/v1/cohort-62',
     headers: {
         'content-type': 'application/json',
         'authorization': localStorage.getItem('token')
