@@ -1,4 +1,5 @@
-export const BASE_URL = 'http://localhost:3500';
+//export const BASE_URL = 'http://localhost:3500';
+export const BASE_URL = 'https://api.easy-deny.pr15.nomoredomainsmonster.ru';
 
 export function register(email, password){
   return fetch(`${BASE_URL}/signup`, {

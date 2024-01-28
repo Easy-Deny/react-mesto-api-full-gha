@@ -88,7 +88,8 @@ class Api {
 
 
 export const api = new Api({
-    url: 'http://localhost:3500',
+    //url: 'http://localhost:3500',
+    url: 'https://api.easy-deny.pr15.nomoredomainsmonster.ru',
     // url: 'https://mesto.nomoreparties.co/v1/cohort-62',
     headers: {
         'content-type': 'application/json',
