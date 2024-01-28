@@ -11,6 +11,6 @@
 
 IP-адрес 51.250.31.81
 
-Frontend https://easy-deny.pr15.nomoredomainsmonster.ru
+Frontend http://easy-deny.pr15.nomoredomainsmonster.ru
 
-Backend https://api.easy-deny.pr15.nomoredomainsmonster.ru
+Backend http://api.easy-deny.pr15.nomoredomainsmonster.ru
