@@ -26,12 +26,11 @@ const createUser = (req, res, next) => {
       _id: data._id, name: data.name, about: data.about, avatar: data.avatar, email: data.email,
     }))
     .catch((err) => {
-      console.log(err);
       if (err.name === 'ValidationError') {
-        next(new BadRequestError(`Incorrect user info error: ${err.name}: ${err.message}`));
+        return next(new BadRequestError(`Incorrect user info error: ${err.name}: ${err.message}`));
       }
       if (err.code === 11000) {
-        next(new ConflictError(`user with an email address exists: ${err.name}: ${err.message}`));
+        return next(new ConflictError(`user with an email address exists: ${err.name}: ${err.message}`));
       }
       next(err);
     });
