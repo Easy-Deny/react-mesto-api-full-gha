@@ -54,11 +54,11 @@ app.get('/crash-test', () => {
 });
 app.use(userRouter);
 app.use(cardRouter);
-app.use(errorLogger);
-app.use(errors());
 app.all('*', (req, res, next) => {
   next(new NotFoundError('404! Page not found'));
 });
+app.use(errorLogger);
+app.use(errors());
 app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`port ${PORT}`);
