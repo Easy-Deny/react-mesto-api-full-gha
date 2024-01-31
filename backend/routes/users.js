@@ -5,7 +5,7 @@ const {
   getUsers,
   getUserById,
   updateUserById,
-  updateUser,
+  getUser,
   updateUserAvatarById,
   login,
 } = require('../controllers/users');
@@ -27,7 +27,7 @@ Router.post('/signup', celebrate({
   }),
 }), createUser);
 Router.use(auth);
-Router.get('/users/me', updateUser);
+Router.get('/users/me', getUser);
 Router.get('/users/:userId', celebrate({
   params: Joi.object().keys({
     userId: Joi.string().length(24).hex().required(),

@@ -82,12 +82,12 @@ const updateUserById = (req, res, next) => UserModel
   .catch((err) => {
     console.log(err);
     if (err.name === 'ValidationError') {
-      next(new BadRequestError(`Incorrect user info: ${err.name}: ${err.message}`));
+      return next(new BadRequestError(`Incorrect user info: ${err.name}: ${err.message}`));
     }
     next(err);
   });
 
-const updateUser = (req, res, next) => UserModel
+const getUser = (req, res, next) => UserModel
   .findById(req.user._id)
   .then((data) => res.status(200).send(data))
   .catch(next);
@@ -108,7 +108,7 @@ module.exports = {
   getUsers,
   getUserById,
   updateUserById,
-  updateUser,
+  getUser,
   updateUserAvatarById,
   login,
 };
