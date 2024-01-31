@@ -98,7 +98,7 @@ const updateUserAvatarById = (req, res, next) => UserModel
   .catch((err) => {
     console.log(err);
     if (err.name === 'ValidationError') {
-      next(new BadRequestError(`Incorrect user info error: ${err.name}: ${err.message}`));
+      return next(new BadRequestError(`Incorrect user info error: ${err.name}: ${err.message}`));
     }
     next(err);
   });
